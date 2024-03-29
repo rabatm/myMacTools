@@ -1,0 +1,44 @@
+README
+
+# myMacOsTools
+
+This repository contains a collection of tools/script for MacOS.
+
+## Tools
+
+## scripts
+
+### myCleanScript.sh
+
+This script will clean cache of system and applications.
+Empty the trash.
+
+### myDownloadClean.sh
+
+this script will clean the download folder.
+he send a notification by email 10 minutes before cleaning.
+update homebrew and remove old versions.
+
+## Installation
+
+Clone the repository to your local machine and navigate to the directory:
+
+Add execution permissions to the scripts:
+
+```bash
+chmod +x myCleanScript.sh
+chmod +x myDownloadClean.sh
+```
+
+Add script in cron job:
+
+```bash
+crontab -e
+```
+
+Add the following line to the file:
+
+```bash
+0 0 * * * /path/to/myCleanScript.sh
+0 0 * * * /path/to/myDownloadClean.sh
+```

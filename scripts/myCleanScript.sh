@@ -48,6 +48,12 @@ sudo rm -rf /private/var/folders/*/*/*/com.apple.Numbers*
 sudo rm -rf /private/var/folders/*/*/*/com.apple.Pages*
 sudo rm -rf /private/var/folders/*/*/*/com.apple.iWork*
 
+# Vider le cache système
+sudo purge
+
+# Vider le cache DNS
+sudo dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
 
 if type "brew" &>/dev/null; then
     echo 'Update Homebrew Recipes...'
