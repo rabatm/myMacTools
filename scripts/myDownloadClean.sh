@@ -11,7 +11,7 @@ if [ -d "$downloads_dir" ]; then
     # Envoyer un e-mail avant de supprimer les fichiers
     echo "Le script va supprimer tous les éléments du dossier 'Téléchargements'." | mail -s "Suppression des téléchargements" "$email_dest"
 
-    spleep 10
+    sleep 10
     # Supprimer tous les fichiers et dossiers dans le dossier "Téléchargements"
     rm -rf "$downloads_dir"/*
     echo "Tous les éléments du dossier 'Téléchargements' ont été supprimés."
